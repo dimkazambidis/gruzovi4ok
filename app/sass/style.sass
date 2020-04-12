@@ -1,0 +1,181 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+/*===============  Base  ===============*/
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $color-placeholder
+	opacity: 1
+
+*:-moz-placeholder
+	color: $color-placeholder
+	opacity: 1
+
+*::-moz-placeholder
+	color: $color-placeholder
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $color-placeholder
+	opacity: 1
+
+html
+	font-size: $fz-base + px
+	line-height: $lh-base
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $color-alert
+body input:required:valid,
+body textarea:required:valid
+	color: $color-success
+
+body
+	min-width: 320px
+	position: relative
+	font-family: $font-default
+	overflow-x: hidden
+	color: $color-text
+	font-size: $fz-base + px
+	line-height: $lh-base
+	letter-spacing: .5px
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 500
+	color: $color-title
+	&.title-section
+		letter-spacing: 1.2px
+		text-transform: uppercase
+		border-bottom: 1px solid #eee
+		span
+			display: inline-block
+			position: relative
+			border-bottom: 1px solid $color-accent
+
+h1
+	+fz(20)
+	line-height: 1
+	margin-bottom: 15px
+
+h2
+	+fz(20)
+	line-height: 1
+	margin-bottom: 15px
+	&.title-section
+		font-weight: 400
+		margin-bottom: 20px
+		span
+			padding-bottom: 14px
+			//border-bottom: none
+
+h3
+	+fz(18)
+	+lh(24)
+	&.title-section
+		+fz(15)
+		margin-bottom: 10px
+		span
+			padding-bottom: 10px
+
+h4
+	+fz(16)
+	+lh(24)
+
+h5
+	+fz(15)
+
+h6
+	+fz(14)
+
+p
+	margin-bottom: 1.5em
+
+ul
+	margin-bottom: 1.5em
+	padding-left: 1em
+	list-style: none
+	li
+		position: relative
+		&::before
+			content: "•"
+			display: inline-block
+			position: absolute
+			color: inherit
+			left: -1em
+			font-weight: 700
+	&.unstyled
+		margin: 0
+		padding: 0
+		li
+			&::before
+				content: none
+
+a
+	color: $color-link
+	transition: color .2s
+	&:hover
+		text-decoration: underline
+	&.a_invert
+		color: $color-title
+		&:hover
+			text-decoration: none
+			color: $color-accent
+
+a.btn,
+input[type="submit"],
+input[type="button"],
+button
+	display: inline-block
+	padding: 12px 20px
+	background-color: $color-accent
+	border: 2px solid $color-accent
+	color: #fff
+	+fz(12)
+	line-height: 1
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 1px
+	text-decoration: none
+	border-radius: 5px
+	transition: all .2s ease-out
+	&.btn_green
+		background-color: $color-green
+		border: 2px solid $color-green
+	&:hover
+		background-color: $color-title
+		border: 2px solid $color-title
+
+.site
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	overflow: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.uppercase
+	text-transform: uppercase
+
+@import "header"
+@import "layout"
+@import "footer"
+@import "animate"
+@import "media"
+
+body
+	opacity: 1
+	transition: opacity .6s
+	transition-delay: .2s

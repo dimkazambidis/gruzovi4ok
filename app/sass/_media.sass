@@ -1,0 +1,192 @@
+/*==============  Media  ==============*/
+
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : map-get($grid-breakpoints, xl) - 1px)
+	/**/
+	.hidden-lg
+		display: none
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : map-get($grid-breakpoints, lg) - 1px)
+	/**/
+	.hidden-md
+		display: none
+
+	.site
+		overflow: hidden
+
+	.site-aside
+		display: none
+
+	.site-header-content
+		transition: left .2s linear
+
+	.site-header-logo
+		img
+			margin-left: -12px
+			height: 32px
+
+	.site-header-cat
+		a.btn
+			padding: 12px 3px 10px 0px
+			background-color: transparent
+			border-color: transparent
+			.ico
+				display: inline-block
+				position: relative
+				top: -3px
+				left: 0
+				background-color: $color-base
+				width: 20px
+				height: 3px
+				&::before,
+				&::after
+					background-color: $color-base
+					height: 3px
+				&::before
+					width: 20px
+					top: -7px
+				&::after
+					width: 20px
+					top: 7px
+			.text
+				display: none
+
+	.site-header-add
+		a
+			.text
+				display: none
+			&::before
+				margin-right: 0
+
+	.site-header-nav
+		padding-top: 30px
+		overflow: auto
+		position: fixed
+		top: 0
+		left: -330px
+		right: auto
+		width: 330px
+		max-width: 85vw
+		height: 100vh
+		transform: translate3d(0px, 0px, 0px)
+		transition: opacity .15s linear 2s, transform .15s linear 0s, visibility 0s linear .2s, left .1s linear 0s
+		z-index: 20
+		h3
+			display: block
+		ul
+			li
+				-webkit-flex: 0 0 100%
+				-ms-flex: 0 0 100%
+				flex: 0 0 100%
+				max-width: 100%
+
+	.site-header,
+	.site-primary,
+	.site-footer
+		left: 0
+		position: relative
+		transition: left .2s linear
+
+	body
+		&.menu-on
+			height: auto
+			overflow: hidden
+			.site-header-nav
+				left: 0
+				transform: translate3d(0px, 0px, 0px)
+				visibility: visible
+				opacity: 1
+				transition: opacity 0.2s linear 0s, transform 0.2s linear, visibility 0s linear, left .2s linear 0s
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : map-get($grid-breakpoints, md) - 1px)
+	/**/
+	.hidden-sm
+		display: none
+
+	.products-item
+		display: block
+
+	.products-item-img
+		padding-right: 0
+		padding-bottom: 25px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : map-get($grid-breakpoints, sm) - 1px)
+	/**/
+	.hidden-xs
+		display: none
+
+	.site-header-nav
+		ul
+			li
+				-webkit-flex: 0 0 100%
+				-ms-flex: 0 0 100%
+				flex: 0 0 100%
+				max-width: 100%
+
+	.popup
+		&.popup_filter
+			.popup-content
+				border-radius: 0
+				min-height: 100vh
+
+	.popup-inner
+		>div
+			>div
+				padding: 0
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : map-get($grid-breakpoints, sm))
+	/**/
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : map-get($grid-breakpoints, md))
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : map-get($grid-breakpoints, lg))
+	/**/
+	.site-header-nav
+		.site-aside-section
+			padding-bottom: 0
+			ul
+				li
+					padding-top: 8px
+					padding-bottom: 8px
+					border-bottom: none
+					span
+						position: relative
+						left: 0
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : map-get($grid-breakpoints, xl))
+	/**/
+	.hidden-xl
+		display: none
+

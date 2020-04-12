@@ -1,0 +1,443 @@
+/*==============  Layout  ==============*/
+.site-primary
+	background-color: #fff
+	flex: 1 0 auto
+	display: flex
+	padding-top: 45px
+
+.site-content
+	width: 100%
+
+.site-aside
+	flex: 0 0 300px
+	max-width: 300px
+
+.page-title
+	h1
+		margin-bottom: 8px
+
+.breadcrumbs
+	ul
+		li
+			display: inline-block
+			a,
+			span
+				color: $color-title
+			a
+				text-decoration: none
+				&:hover
+					color: $color-link
+			&::after
+				content: " / "
+			&:last-child
+				&::after
+					content: none
+
+.page-title-text
+	padding-top: 30px
+	p
+		&:last-child
+			margin-bottom: 0
+
+// .section-typical
+// 	padding-bottom: 60px
+
+.products
+	//border-top: 1px solid #e4e4e4
+	padding-bottom: 60px
+
+.products-filter
+	padding-top: 25px
+	padding-bottom: 25px
+	a
+		display: inline-block
+		position: relative
+		color: $color-base
+		text-decoration: none
+		&::before
+			content: "\f03a"
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			+fz(22)
+			line-height: 1
+			display: inline-block
+			margin-right: 12px
+			top: 2px
+			position: relative
+
+.products-item
+	padding-top: 30px
+	padding-bottom: 30px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	border-top: 1px solid #e4e4e4
+	&:last-child
+		border-bottom: none
+
+.products-item-img
+	position: relative
+	padding-right: 20px
+	figure
+		margin-bottom: 0
+		border-radius: 4px
+		overflow: hidden
+		width: 100%
+	img
+		width: 100%
+		height: auto
+
+.products-item-city
+	+fz(12)
+	margin-bottom: 12px
+	i
+		display: inline-block
+		margin-right: 4px
+
+.products-item-img-wrap
+	position: relative
+	border-radius: 4px
+	width: 160px
+	height: 160px
+
+.products-item-status
+	margin-top: 20px
+	display: inline-block
+	padding: 4px 7px
+	+fz(12)
+	line-height: 1.2
+	border-radius: 4px
+	i
+		display: inline-block
+		margin-right: 4px
+		position: relative
+	&.products-item-status_gold
+		color: #9d8967
+		border: 1px solid #ffeccc
+		background-color: #fff4e2
+		i
+			color: #fcae01
+	&.products-item-status_top
+		color: #5e7f96
+		border: 1px solid #dcf1ec
+		background-color: #e6fdf8
+		i
+			color: #1bbc9b
+
+.products-item-content
+	position: relative
+	h3
+		+fz(16)
+		+lh(20)
+		font-weight: 400
+		margin-bottom: 10px
+
+.products-item-rating
+	margin-bottom: 10px
+	color: $color-yellow
+	//line-height: 1
+	+fz(12)
+	&::before,
+	&::after
+		font-family: 'Font Awesome 5 Free'
+	&[data-rating="1"]
+		&::before
+			content: "\f005"
+			font-weight: 900
+		&::after
+			content: "\f005\f005\f005\f005"
+			font-weight: 400
+	&[data-rating="2"]
+		&::before
+			content: "\f005\f005"
+			font-weight: 900
+		&::after
+			content: "\f005\f005\f005"
+			font-weight: 400
+	&[data-rating="3"]
+		&::before
+			content: "\f005\f005\f005"
+			font-weight: 900
+		&::after
+			content: "\f005\f005"
+			font-weight: 400
+	&[data-rating="4"]
+		&::before
+			content: "\f005\f005\f005\f005"
+			font-weight: 900
+		&::after
+			content: "\f005"
+			font-weight: 400
+	&[data-rating="5"]
+		&::before
+			content: "\f005\f005\f005\f005\f005"
+			font-weight: 900
+
+.products-item-price
+	font-weight: 500
+	color: $color-title
+	margin-bottom: 10px
+
+.products-item-text
+	margin-bottom: 10px
+
+.products-item-param
+	margin-bottom: 10px
+	ul
+		li
+			display: inline-block
+			+fz(12)
+			color: $color-title
+			margin-right: 8px
+			strong
+				font-weight: 500
+
+.products-item-tags
+	margin-bottom: 20px
+	a
+		display: inline-block
+		padding: 4px 7px
+		margin: 4px 2px 4px 0
+		border: 1px solid #eee
+		+fz(12)
+		line-height: 1.2
+		background-color: #f5f5f5
+		border-radius: 4px
+		color: $color-title
+		transition: all .2s ease
+		&:hover,
+		&.current
+			text-decoration: none
+			color: #fff
+			background-color: $color-accent
+			border: 1px solid $color-accent
+
+.products-item-tel
+	a
+		color: $color-title
+		+fz(16)
+		display: inline-block
+		padding: 4px 7px
+		line-height: 1.2
+		border: 1px solid transparent
+		&.show-tel
+			border: 1px solid #eee
+			background-color: #f5f5f5
+			border-radius: 4px
+			color: $color-title
+			transition: all .2s ease
+			&:hover,
+			&.current
+				text-decoration: none
+				color: #fff
+				background-color: $color-accent
+				border: 1px solid $color-accent
+	&::before
+		content: "\f879"
+		font-family: 'Font Awesome 5 Free'
+		font-weight: 900
+		+fz(18)
+		color: $color-green
+		margin-right: 12px
+
+.products-item-num
+	position: absolute
+	left: 0
+	bottom: 0
+	display: inline-block
+	background-color: $color-base
+	color: #fff
+	font-weight: 500
+	+fz(12)
+	+lh(24)
+	letter-spacing: 1.2
+	padding-left: 12px
+	padding-right: 12px
+	border-radius: 2px
+	height: 20px
+
+.products-pgination
+	padding-top: 40px
+	text-align: center
+	a
+		display: inline-block
+		width: 30px
+		height: 30px
+		+fz(18)
+		text-align: center
+		color: $color-title
+		border-radius: 4px
+		transition: all .2s
+		&.current
+			background-color: $color-accent
+			color: #fff
+		&:hover
+			text-decoration: none
+			background-color: $color-accent
+			color: #fff
+		&.prev,
+		&.next
+			&::before
+				font-family: 'Font Awesome 5 Free'
+				font-weight: 900
+		&.prev
+			&::before
+				content: "\f104"
+		&.next
+			&::before
+				content: "\f105"
+
+.bottom-content
+	h2
+		padding-bottom: 10px
+		margin-bottom: 20px
+		border-bottom: 1px solid #e4e4e4
+	h3
+		+fz(16)
+		a
+			//color: $color-title
+			text-decoration: underline
+			&:hover
+				color: $color-link
+
+ul.steps
+	counter-reset: li
+	margin-bottom: 40px
+	li
+		position: relative
+		padding: 15px 15px 15px 52px
+		border: 1px solid #e4e4e4
+		border-radius: 4px
+		margin-bottom: 20px
+		&::before
+			content: counter(li,decimal)
+			counter-increment: li
+			display: block
+			position: absolute
+			top: 15px
+			left: 15px
+			width: 27px
+			height: 27px
+			border-radius: 50%
+			background-color: $color-green//#56b0ee
+			text-align: center
+			color: #fff
+			padding-top: 3px
+		&:last-child
+			margin-bottom: 0
+		p
+			&:last-child
+				margin-bottom: 0
+	&.steps_nonum
+		li
+			padding: 15px
+			&::before
+				content: none
+
+.site-aside-section
+	padding-bottom: 40px
+	ul
+		li
+			padding: 10px 40px 10px 0
+			position: relative
+			border-bottom: 1px solid #eee
+			span
+				display: inline-block
+				position: absolute
+				right: 0
+				&::before
+					content: "("
+				&::after
+					content: ")"
+			&:last-child
+				border-bottom: none
+
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow-y: scroll
+	z-index: 1111
+	&.popup_filter
+		.popup-content
+			max-width: 536px
+			margin-left: auto
+			margin-right: auto
+			padding: 20px 20px 0
+			background-color: #fff
+		.popup-close
+			top: 10px
+			right: 10px
+
+
+.popup-bg
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(19,25,53,.6)
+	visibility: hidden
+	opacity: 0
+	transition: opacity .2s, visibility .2s
+	transition-delay: .3s
+
+.popup-inner
+	position: relative
+	transform: translateY(100vh)
+	transition: transform .15s ease-out
+	transition-delay: 0s
+	>div
+		display: table
+		width: 100%
+		height: 100vh
+		>div
+			display: table-cell
+			vertical-align: middle
+			padding: 25px 16px
+
+.popup-content
+	position: relative
+	border-radius: 4px
+
+.popup-close
+	display: block
+	position: absolute
+	width: 40px
+	height: 40px
+	&::before, &::after
+		content: ""
+		display: block
+		position: absolute
+		height: 3px
+		left: 10px
+		right: 10px
+		top: 50%
+		margin-top: -1px
+		background-color: $color-base
+		transition: background-color .3s
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
+
+body
+	&.popup-on
+		overflow: hidden
+		height: auto
+		.popup
+			&.active
+				display: block
+			&.visible
+				.popup-bg
+					visibility: visible
+					opacity: 1
+					transition-delay: 0s
+				.popup-inner
+					transform: translateY(0)
+					transition-delay: .2s
